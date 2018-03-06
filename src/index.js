@@ -6,6 +6,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extend: false }))
 
-require('./controllers/authController')(app)
+require('./app/controllers/authController')(app)
+require('./app/controllers/projectController')(app)
 
-app.listen(3000)
+app.listen(4000)
